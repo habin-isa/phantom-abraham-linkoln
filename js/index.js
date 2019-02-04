@@ -25,6 +25,10 @@ function appCtrl ($scope) {
       likes: 15
     }
   ];
+    
+  $scope.increment = function ($index) {
+    $scope.likes++;
+   };
   
   $scope.addBookmark = function () {
 	  $scope.bookmarks.push({
@@ -35,6 +39,11 @@ function appCtrl ($scope) {
 	  });
 	  $scope.site_name = '';
 	  $scope.site_url = '';
-    $scope.site_category = '';
+	  $scope.site_category = '';
   },
+    
+  $scope.deleteBookmark = function (id) {
+    var bookmark = $scope.bookmarks[id];
+    $scope.bookmarks.splice(id, 1);
+  }
 }

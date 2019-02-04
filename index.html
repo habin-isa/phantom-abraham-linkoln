@@ -1,8 +1,11 @@
+<!DOCTYPE html>
 <html lang="en" ng-app ng-controller="appCtrl">
 	<head>
+		<meta charset="UTF-8">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> 
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"> 
 		<link rel="stylesheet" type="text/css" href="app-style.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 	</head>
 
 	<body class="wrapper" ng-app="appCtrl">
@@ -11,20 +14,17 @@
 			<div class="col-sm-6 col-md-6 col-lg-6">
 				<div class="search">
 					<div class="subtitle">Search:</div>
-					<input class="input" type="text" id="search-value" placeholder="  Type in name or label">
-					<button class="button">search</button>
+					<input class="input" type="text" ng-model="search" placeholder="Type in name or label">
 				</div>
-
-				<!-- <div class="bookmarks-panel">
+				<div class="links">
 					<ul class="bookmarks">
 						<li ng-repeat="site in bookmarks | filter: search">
-							<a href="{{ site.link }}" class="site-label">{{ site.title }}</a>
-							<span class="label secondary"> {{site.category}}</span>
-							<span>{{ site.likes}} Likes</span>
-							<i class="right icon-trash" ng-click="deleteBookmark($index)"></i>
+							<a href="{{ site.url }}">{{ site.title }}</a>
+							<span class="tag">{{site.category}}</span>
+							<button class="button" ng-click="deleteBookmark($index)">Delete</button>
 						</li>
 					</ul>
-				</div> -->
+				</div>
 			</div>
 
 			<div class="col-sm-6 col-md-6 col-lg-6">
@@ -37,19 +37,16 @@
 								<p class="label">Category</p>
 						</div>
 						<div class="col-sm-4 col-md-4 col-lg-4">
-							<input class="input" type="text" id="link" placeholder="Paste in URL" ng-model="site_link">
-							<input class="input" type="text" id="name" placeholder="Label for this link" ng-model="site_name">
-							<input class="input" type="text" id="category" placeholder="Type in a category" ng-model="site_category">
+							<input class="input" type="text" placeholder="Paste in URL" ng-model="site_url">
+							<input class="input" type="text" placeholder="Label for this link" ng-model="site_name">
+							<input class="input" type="text" placeholder="Type in a category" ng-model="site_category">
 							<button class="button__submit" ng-click="addBookmark()">submit</button> 
 						</div>
 					</div>
 			</div>
 		</div>
-			<!-- <script type="text/javascript" src="js/appCtrl.js"></script>
-			<script></script> -->
-			<script src="appCtrl.js"></script>
-			<!-- <script src="appCtrl.js"></script> -->
+			<script src="js/index.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 	</body>
 </html>

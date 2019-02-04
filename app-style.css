@@ -1,0 +1,121 @@
+.site-label {
+	color: #feeae8;
+}
+ul.bookmarks {
+list-style: none;
+}
+ul.bookmarks li {
+	margin-bottom: 5px;
+	border-bottom: 1px solid #ddd;
+	padding: 5px;
+}
+.bookmarks-panel {
+	height: 26px;
+	width: 423px;
+	background-color: #4237b9;
+	color: #feeae8;
+	font-family: "Nunito Sans";
+	font-size: 9px;
+	font-weight: 500;
+	margin-top: 32px;
+}
+#label-panel {
+	display: grid;
+	margin-left: 97px;
+	text-align: left;
+	padding: 0;
+}
+.right-panel {
+	margin-top: 57px;
+	margin-left: 97px;
+}
+.label {
+color: #4237b9;
+font-family: "Nunito Sans";
+font-size: 12px;
+line-height: 16px;
+padding-left: 0;
+}
+.subtitle {
+	color: #4237b9;
+	font-size: 16px;
+	line-height: 16px;
+	margin-right: 20px;
+	margin-top: 5px;
+}
+.subtitle__add {
+	color: #4237b9;
+	font-size: 16px;
+	line-height: 16px;
+	margin-bottom: 15px;
+	margin-top: 57px;
+	margin-left: 97px;
+}
+.input {
+	box-sizing: border-box;
+	height: 25px;
+	width: 285px;
+	background-color:#fff;
+	border: 0.5px solid #e8e8e8;
+	color: rgba(130,130,130,0.7);
+	font-family: "Nunito Sans";
+	font-size: 10px;
+	line-height: 11px;
+	margin-bottom: 5px;
+	padding-left: 10px;
+}
+input:focus {
+	outline:none;
+}
+.button {
+	height: 18px;
+	width: 50px;
+	background-color:#4237b9;
+	color: #feeae8;
+	font-size: 8px;
+	line-height: 6px;
+	text-align: center;
+	border: none;
+	margin-top: 2.5px;
+	margin-left: 10px;
+	padding-top: 5px;
+}
+.button__submit {
+	height: 18px;
+	width: 50px;
+	background-color:#4237b9;
+	color: #feeae8;
+	font-size: 8px;
+	line-height: 6px;
+	text-align: center;
+	border: none;
+	margin-top: 2.5px;
+	margin-right: 10px;
+	float: right;
+	padding-top: 5px;
+}
+.wrapper {
+	font-family: Rockwell;
+	background-color: #feeae8;
+	padding: 0 4%;
+}
+.row {
+	margin-top: 40px;
+}
+.title {
+	color: #4237b9;
+	font-size: 67px;
+	line-height: 68px;
+	text-align: center;
+	margin-top: 89px;
+	letter-spacing: 4.5px;
+}
+.search {
+	margin-top: 174px;
+	display: inline-flex;
+}
+#add {
+	height: 238px;
+	border: 6px solid #4237b9;
+	margin-top: 15px;
+}

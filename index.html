@@ -1,0 +1,55 @@
+<html lang="en" ng-app ng-controller="appCtrl">
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> 
+		<link rel="stylesheet" type="text/css" href="app-style.css" />
+	</head>
+
+	<body class="wrapper" ng-app="appCtrl">
+		<div class="row">
+
+			<div class="col-sm-6 col-md-6 col-lg-6">
+				<div class="search">
+					<div class="subtitle">Search:</div>
+					<input class="input" type="text" id="search-value" placeholder="  Type in name or label">
+					<button class="button">search</button>
+				</div>
+
+				<!-- <div class="bookmarks-panel">
+					<ul class="bookmarks">
+						<li ng-repeat="site in bookmarks | filter: search">
+							<a href="{{ site.link }}" class="site-label">{{ site.title }}</a>
+							<span class="label secondary"> {{site.category}}</span>
+							<span>{{ site.likes}} Likes</span>
+							<i class="right icon-trash" ng-click="deleteBookmark($index)"></i>
+						</li>
+					</ul>
+				</div> -->
+			</div>
+
+			<div class="col-sm-6 col-md-6 col-lg-6">
+				<p class="title">Abraham Linkoln</p>
+					<div class="row" id="add">
+						<p class="subtitle__add">Add new bookmark:</p>
+						<div class="col-sm-2 col-md-2 col-lg-2" id="label-panel">
+								<p class="label">Link</p>
+								<p class="label">Name</p>
+								<p class="label">Category</p>
+						</div>
+						<div class="col-sm-4 col-md-4 col-lg-4">
+							<input class="input" type="text" id="link" placeholder="Paste in URL" ng-model="site_link">
+							<input class="input" type="text" id="name" placeholder="Label for this link" ng-model="site_name">
+							<input class="input" type="text" id="category" placeholder="Type in a category" ng-model="site_category">
+							<button class="button__submit" ng-click="addBookmark()">submit</button> 
+						</div>
+					</div>
+			</div>
+		</div>
+			<!-- <script type="text/javascript" src="js/appCtrl.js"></script>
+			<script></script> -->
+			<script src="appCtrl.js"></script>
+			<!-- <script src="appCtrl.js"></script> -->
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</body>
+</html>

@@ -20,9 +20,9 @@
 					<ul class="bookmarks">
 						<li ng-repeat="site in bookmarks | filter: search">
 							<a href="{{ site.url }}">{{ site.title }}</a>
-							<span class="tag">{{site.category}}</span>
 							<button class="button__edit">Edit</button>
 							<button class="button__edit" ng-click="deleteBookmark($index)">Delete</button>
+							<span class="tag">{{ site.category }}</span>
 						</li>
 					</ul>
 				</div>
@@ -31,19 +31,30 @@
 <!-- RHS wrapper, add new link input fields with validation and submit -->
 			<div class="col-sm-6 col-md-6 col-lg-6">
 				<p class="title">Abraham Linkoln</p>
-					<div class="row" id="add">
+
+				<!-- blue box with form v1 -->
+					<div class="row" id="add" ng-hide="showResult">
 						<p class="subtitle__add">Add new bookmark:</p>
 						<div class="col-sm-2 col-md-2 col-lg-2" id="label-panel">
 								<p class="label">Link</p>
 								<p class="label">Name</p>
 								<p class="label">Category</p>
 						</div>
+						<!-- form inputs with error binding -->
 						<div class="col-sm-4 col-md-4 col-lg-4">
-							<input class="input" type="text" placeholder="Paste in URL" ng-model="site_url">
+							<input class="input" type="url" placeholder="Paste in URL" ng-model="site_url">
+							<div class="error" ng-show="urlError">Please enter a valid URL</div>
 							<input class="input" type="text" placeholder="Label for this link" ng-model="site_name">
 							<input class="input" type="text" placeholder="Type in a category" ng-model="site_category">
-							<button class="button__submit" ng-click="addBookmark()">submit</button> 
+							<button class="button__submit" ng-click="isFieldFilled(site_name) + isValidUrl() + addBookmark()">submit</button> 
 						</div>
+					</div>
+					<!-- blue box with results v2 -->
+					<div class="row" id="results" ng-show="showResult">
+						<p class="comment">Thank you for your submission.</p>
+						<p class="comment">Your link for: {{ newLink}} has been added.</p>
+						<p class="comment">Never lose a link again brah.</p>
+						<button class="pale-button" ng-click="hideResults()">Add another link</button>
 					</div>
 			</div>
 		</div>

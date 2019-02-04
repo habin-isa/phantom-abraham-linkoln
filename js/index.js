@@ -15,13 +15,13 @@ function appCtrl ($scope) {
     {
       title: 'Github',
       url: 'http://github.com',
-      category: 'News',
+      category: 'Code',
       likes: 10
     },
     {
-      title: 'Google',
-      url: 'http://google.com',
-      category: 'Web Design',
+      title: 'FR',
+      url: 'https://www.ft.com/?edition=uk',
+      category: 'News',
       likes: 15
     },
     {
@@ -37,40 +37,49 @@ function appCtrl ($scope) {
       likes: 15
     }
   ];
+
+  $scope.showResult = false;
+  $scope.newLink = '';
+  $scope.urlError = false;
     
   $scope.increment = function ($index) {
     $scope.likes++;
   };
 
-  $scope.validUrl = function (str) {
-    regexp =  /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
-      if (regexp.test(str))
-      {
-        return true;
-      }
-      else
-      {
-        return false;
-      }
+  $scope.hideResults = function () {
+    $scope.showResult = false;
+  };
+
+  $scope.isValidUrl = function (str) {
+    var a  = document.createElement('a');
+    a.href = str;
+    return (a.host && a.host != window.location.host);
+  };
+
+  $scope.addBookmark = function () {
+    const name = $scope.site_name;
+    const category = $scope.site_category;
+    const url = $scope.site_url;
+    if ($scope.isValidUrl(url) === true) {
+      $scope.bookmarks.push({
+        title: name.charAt(0).toUpperCase() + name.slice(1),
+        url: url,
+        category: category.charAt(0).toUpperCase() + category.slice(1),
+        likes: 0
+      });
+      $scope.newLink = $scope.site_name;
+      $scope.site_name = '';
+      $scope.site_url = '';
+      $scope.site_category = '';
+      $scope.showResult = true;
+      $scope.urlError = false;
+    } else {
+      return $scope.urlError = true;
     }
   };
-  
-  $scope.addBookmark = function () {
-    $scope.validUrl($scope.site_url);
-	  $scope.bookmarks.push({
-		  title: $scope.site_name,
-		  url: $scope.site_url,
-		  category: $scope.site_category,
-      likes: 0
-	  });
-	  $scope.site_name = '';
-	  $scope.site_url = '';
-    $scope.site_category = '';
-    window.location.href = "submission.html";
-  },
     
   $scope.deleteBookmark = function (id) {
     var bookmark = $scope.bookmarks[id];
     $scope.bookmarks.splice(id, 1);
-  }
-}
+  };
+};

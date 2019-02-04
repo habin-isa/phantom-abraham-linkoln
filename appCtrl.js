@@ -1,34 +1,28 @@
 function appCtrl ($scope) {
   $scope.bookmarks = [
     {
-      title: 'Smashing Magazine',
-      url: 'http://smashingmagazine.com',
-      category: 'Web Design',
+      title: 'Phantom',
+      url: 'http://phantom.land',
+      category: 'Creative Agency',
       likes: 2
     },
     {
-      title: 'Reddit',
-      url: 'http://reddit.com',
-      category: 'Community',
+      title: 'HIK',
+      url: 'http://habin-isa.com',
+      category: 'Art',
       likes: 1
     },
     {
-      title: 'CNN',
-      url: 'http://cnn.com',
+      title: 'Github',
+      url: 'http://github.com',
       category: 'News',
       likes: 10
     },
     {
-      title: 'A List Apart',
-      url: 'http://alistapart.com',
+      title: 'Google',
+      url: 'http://google.com',
       category: 'Web Design',
       likes: 15
-    },
-    {
-      title: 'CodePen',
-      url: 'https://codepen.io',
-      category: 'Web Design',
-      likes: 3
     }
   ];
   

@@ -5,6 +5,8 @@ As a user I can:
 - View a list of all bookmarks, click on each to visit sites
 - Edit and delete any bookmark
 
+![alt text](linkoln-draft.png "Mock-up image")
+
 Installation instructions:
 - $ git clone https://github.com/habin-isa/phantom-abraham-linkoln.git
 - $ cd phantom-abraham-linkoln

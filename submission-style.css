@@ -1,0 +1,36 @@
+.wrapper {
+	background-color:#4237b9;
+	font-family: Rockwell;
+	padding: 0 4%;
+}
+.title {
+	color: #feeae8;
+	font-size: 68px;
+	line-height: 68px;
+	text-align: right;
+	margin-top: 89px;
+	letter-spacing: 4.5px;
+}
+.box {
+	box-sizing: border-box;
+	height: 510px;
+	border: 6px solid #feeae8;
+	margin-top: 10px;
+	padding-left: 100px;
+	padding-top: 140px;
+}
+.subtitle {
+	color: #feeae8;
+	font-size: 30px;
+}
+.button {
+	padding: 10px;
+	background-color: #feeae8;
+	color: #4237b9;
+	font-size: 18px;
+	text-align: center;
+	border: none;
+}
+.homepage {
+	margin-top: 40px;
+}

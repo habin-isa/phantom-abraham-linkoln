@@ -1,36 +1,42 @@
 	.tag {
-		box-sizing: border-box;
-		height: 19px;
-		width: 70px;
-		border: 2px solid #ffbd59;
+		border: 1px solid #ffbd59;
 		color: #ffbd59;
 		font-family: "Nunito Sans";
-		font-size: 10px;
-		font-weight: 600;
-		line-height: 14px;
+		font-size: 7px;
+		font-weight: 500;
 		text-align: center;
+		padding-left: 8px;
+		padding-right: 8px;
+		margin-bottom: 10px;
+		margin-left: 20px;
+		padding-top: 3px;
+		padding-bottom: 5px;
 	}
 	.site-label {
 		color: #feeae8;
 	}
 	ul.bookmarks {
-  list-style: none;
+		list-style: none;
+		padding-inline-start: 0;
+		padding: 0;
 	}
 	ul.bookmarks li {
 		margin-bottom: 5px;
-		border-bottom: 1px solid #ddd;
+		border-bottom: 1px solid white;
 		padding: 5px;
-	}
-	/* .bookmarks-panel {
-		height: 26px;
-		width: 423px;
+		height: 30px;
+		width: 362px;
 		background-color: #4237b9;
 		color: #feeae8;
 		font-family: "Nunito Sans";
-		font-size: 9px;
-		font-weight: 500;
-		margin-top: 32px;
-	} */
+		font-size: 12px;
+	}
+	a:visited {
+		color: #feeae8;
+	}
+	a:link {
+		color: #feeae8;
+	}
 	#label-panel {
 		display: grid;
 		margin-left: 97px;
@@ -92,6 +98,21 @@
     margin-left: 10px;
 		padding-top: 5px;
 	}
+	.button__edit {
+		box-sizing: border-box;
+		height: 19px;
+		width: 70px;
+		background-color: #ffbf5e;
+		color: #4237b9;
+		font-family: "Nunito Sans";
+		font-size: 8px;
+		font-weight: 600;
+		letter-spacing: 0.18px;
+		text-align: center;
+		border: none;
+		float: right;
+		margin-left: 5px;
+	}
 	.button__submit {
 		height: 18px;
 		width: 50px;
@@ -125,6 +146,7 @@
 	.search {
 		margin-top: 174px;
 		display: inline-flex;
+		margin-bottom: 20px;
 	}
 	#add {
 		height: 238px;

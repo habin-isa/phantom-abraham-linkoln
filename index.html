@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"> 
 		<link rel="stylesheet" type="text/css" href="app-style.css" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 	</head>
@@ -21,7 +20,8 @@
 						<li ng-repeat="site in bookmarks | filter: search">
 							<a href="{{ site.url }}">{{ site.title }}</a>
 							<span class="tag">{{site.category}}</span>
-							<button class="button" ng-click="deleteBookmark($index)">Delete</button>
+							<button class="button__edit">Edit</button>
+							<button class="button__edit" ng-click="deleteBookmark($index)">Delete</button>
 						</li>
 					</ul>
 				</div>

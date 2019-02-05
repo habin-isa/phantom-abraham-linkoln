@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="app-style.css" />
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 	</head>
 
@@ -13,18 +13,22 @@
 <!-- LHS wrapper, search input bar and list of links -->
 			<div class="col-sm-6 col-md-6 col-lg-6">
 				<div class="search">
+					<!-- search to filter through list of links -->
 					<div class="subtitle">Search:</div>
 					<input class="input" type="text" ng-model="search" placeholder="Type in name or label">
 				</div>
+				
 				<div class="links">
 					<ul class="bookmarks">
-						<li ng-repeat="site in bookmarks | filter: search">
-							<a href="{{ site.url }}">{{ site.title }}</a>
-							<button class="button__edit">Edit</button>
+						<li ng-repeat="site in filteredBookmarks = (bookmarks | filter: search)">
+							<a href="{{ site.url }}" class="url">{{ site.title }}</a>
+							<button class="button__edit" ng-click="editBookmark($index)">Edit</button>
 							<button class="button__edit" ng-click="deleteBookmark($index)">Delete</button>
 							<span class="tag">{{ site.category }}</span>
 						</li>
 					</ul>
+					<div class="subtitle" ng-show="!filteredBookmarks.length">No matching links Abe :-(</div>
+
 				</div>
 			</div>
 
@@ -46,7 +50,7 @@
 							<div class="error" ng-show="urlError">Please enter a valid URL</div>
 							<input class="input" type="text" placeholder="Label for this link" ng-model="site_name">
 							<input class="input" type="text" placeholder="Type in a category" ng-model="site_category">
-							<button class="button__submit" ng-click="isFieldFilled(site_name) + isValidUrl() + addBookmark()">submit</button> 
+							<button class="button__submit" ng-click="isValidUrl() + addBookmark()">submit</button> 
 						</div>
 					</div>
 					<!-- blue box with results v2 -->
@@ -56,9 +60,23 @@
 						<p class="comment">Never lose a link again brah.</p>
 						<button class="pale-button" ng-click="hideResults()">Add another link</button>
 					</div>
+					<!-- blue box with editing mode v3 -->
+					<div class="row" id="edit" ng-show="showEdit">
+						<p class="comment">Editing mode:</p>
+						<input type="text" placeholder="editingBookmark.name" class="input" ng-model="site_name">
+						<input type="text" placeholder="$scope.editingBookmark.url" class="input" ng-model="site_url">
+						<div class="error" ng-show="urlError">Please enter a valid URL</div>
+						<input type="text" placeholder="$scope.editingBookmark.category" class="input" ng-model="site_category">
+						<button class="pale-button-small" ng-click="submitChanges()">Submit changes</button>
+						<button class="pale-button-small" ng-click="showEdit = false">Cancel</button>
+					</div>
+					<!-- hyperlinks for external links -->
+					<a href="https://github.com/habin-isa/phantom-abraham-linkoln" class="external-links">	► Github repository</a>
+					<a href="https://github.com/habin-isa/phantom-abraham-linkoln/blob/master/README.md" class="external-links"> ► Technical Design Document</a>  
 			</div>
 		</div>
 			<script src="js/index.js"></script>
+			<script src="js/pagination.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 	</body>

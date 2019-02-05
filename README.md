@@ -10,7 +10,7 @@
 ## Use the app:
 https://abraham-linkoln.herokuapp.com/
 
-![alt text](linkoln-draft.png "Mock-up image")
+![alt text](/assets/linkoln-draft.png "Mock-up image")
 
 ## Installation instructions:
 - $ git clone https://github.com/habin-isa/phantom-abraham-linkoln.git
@@ -26,7 +26,7 @@ https://abraham-linkoln.herokuapp.com/
 - Heroku
 - Invision studio for design
 
-![alt text](linkoln-diagram.png "Mock-up image")
+![alt text](/assets/linkoln-diagram.png "Structure")
 
 ## Approach:
 - Learn the basics of Angular.js through tutorials and then by creating the MVP for the project. Draw from experiences of using JS and Vue.js to create adaptable code.
@@ -42,3 +42,8 @@ https://abraham-linkoln.herokuapp.com/
 ## Struggles:
 - Struggled hugely with keeping the controller skinny, the controller is very clunky and has not been distributed into multiple modules, I would like to improve this with more time. I see this as a result of learning Angular.js whilst creating the project. I would like to spend time understanding the best practices of Angular.js and how to go about creating components to optimise this app.
 - I wasn't able to successfully implement pagination, I would like to experiment with how to create a custom filter in the controller.
+
+![alt text](/assets/linkoln-improvements.png "Improvements")
+
+## Improvements:
+- My main priority is to distribute every module into components away from the main index.html page. This is a dipiction of how I plan to go about delegating responsibilites away from the main ng-controller.

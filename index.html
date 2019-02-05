@@ -17,7 +17,7 @@
 				<div class="search">
 					<!-- search to filter through list of links -->
 					<div class="subtitle">Search:</div>
-					<input class="input" type="text" ng-model="search" placeholder="Type in name or label">
+					<input class="input" type="text" ng-model="search" placeholder="Type in link name or category">
 				</div>
 				
 				<div class="links">
@@ -63,14 +63,13 @@
 						<button class="pale-button" ng-click="hideResults()">Add another link</button>
 					</div>
 					<!-- blue box with editing mode v3 -->
-					<div class="row" id="edit" ng-show="showEdit">
+					<div class="row" id="edit" ng-show="showEdit && !showResult">
 						<p class="comment">Editing mode:</p>
 						<input type="text" class="input" ng-model="editingBookmark.title">
 						<input type="text" class="input" ng-model="editingBookmark.url">
 						<div class="error" ng-show="urlError">Please enter a valid URL</div>
 						<input type="text" class="input" ng-model="editingBookmark.category">
 						<button class="pale-button-small" ng-click="submitChanges()">Submit changes</button>
-						<button class="pale-button-small" ng-click="showEdit = false">Cancel</button>
 					</div>
 					<!-- hyperlinks for external links -->
 					<a href="https://github.com/habin-isa/phantom-abraham-linkoln" class="external-links">► Github repository</a>

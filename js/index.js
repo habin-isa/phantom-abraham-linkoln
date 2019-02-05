@@ -199,6 +199,7 @@ function appCtrl ($scope) {
     var bookmark = $scope.bookmarks[id];
     $scope.editingBookmark = bookmark;
     $scope.showEdit = true;
+    $scope.showResult = false;
   };
 
   $scope.submitChanges = function () {

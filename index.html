@@ -19,16 +19,18 @@
 					<div class="subtitle">Search:</div>
 					<input class="input" type="text" ng-model="search" placeholder="Type in link name or category">
 				</div>
-				
+<!-- display existing bookmarks -->
 				<div class="links">
 					<ul class="bookmarks">
-						<li ng-repeat="site in filteredBookmarks = (bookmarks | filter: search)">
+							<li ng-repeat="site in filteredBookmarks = (bookmarks | filter: search)">
 							<a href="{{ site.url }}" class="url">{{ site.title }}</a>
 							<button class="button__edit" ng-click="editBookmark($index)">Edit</button>
 							<button class="button__edit" ng-click="deleteBookmark($index)">Delete</button>
 							<span class="tag">{{ site.category }}</span>
 						</li>
 					</ul>
+
+<!-- show if search returns no bookmarks -->
 					<div class="subtitle" ng-show="!filteredBookmarks.length">No matching links Abe :-(</div>
 
 				</div>

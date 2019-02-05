@@ -1,4 +1,4 @@
-function appCtrl ($scope) {
+function appCtrl ($scope, $filter) {
   $scope.bookmarks = [
     {
       title: 'Phantom',
@@ -149,9 +149,9 @@ function appCtrl ($scope) {
   $scope.showResult = false;
   $scope.newLink = '';
   $scope.urlError = false;
-  $scope.editingBookmark = []
+  $scope.editingBookmark = [];
   $scope.showEdit = false;
-  $scope.editingId = ''
+  $scope.editingId = '';
 
   $scope.increment = function ($index) {
     $scope.likes++;
@@ -226,8 +226,6 @@ function appCtrl ($scope) {
     };
     $scope.showEdit = false;
   };
-
-  
 
   // $scope.openInNewTab = function (url) {
   //   window.open(url,'_blank');

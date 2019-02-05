@@ -121,19 +121,6 @@ padding-left: 0;
 input:focus {
 	outline:none;
 }
-/* .button {
-	height: 18px;
-	width: 50px;
-	background-color:#4237b9;
-	color: #feeae8;
-	font-size: 8px;
-	line-height: 6px;
-	text-align: center;
-	border: none;
-	margin-top: 2.5px;
-	margin-left: 10px;
-	padding-top: 5px;
-} */
 .button__edit {
 	box-sizing: border-box;
 	height: 19px;

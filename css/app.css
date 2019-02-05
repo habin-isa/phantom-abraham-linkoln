@@ -179,11 +179,16 @@ input:focus {
 }
 .title {
 	color: #4237b9;
-	font-size: 67px;
+	font-size: 65px;
 	line-height: 68px;
 	text-align: center;
 	margin-top: 89px;
 	letter-spacing: 4.5px;
+	-webkit-transition: font-size 0.5s; /* For Safari 3.1 to 6.0 */
+  transition: font-size 0.5s;
+}
+.title:hover {
+	font-size: 63px;
 }
 .search {
 	margin-top: 174px;

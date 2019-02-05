@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" ng-app ng-controller="appCtrl">
 	<head>
-		<meta charset="UTF-8">
+		<title>Abraham Linkoln bookmarks app</title>
+		<meta charset="utf-8">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/app.css" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
@@ -37,7 +38,7 @@
 				<p class="title">Abraham Linkoln</p>
 
 				<!-- blue box with form v1 -->
-					<div class="row" id="add" ng-hide="showResult">
+					<div class="row" id="add" ng-hide="showResult || showEdit">
 						<p class="subtitle__add">Add new bookmark:</p>
 						<div class="col-sm-2 col-md-2 col-lg-2" id="label-panel">
 								<p class="label">Link</p>
@@ -63,16 +64,16 @@
 					<!-- blue box with editing mode v3 -->
 					<div class="row" id="edit" ng-show="showEdit">
 						<p class="comment">Editing mode:</p>
-						<input type="text" placeholder="editingBookmark.name" class="input" ng-model="site_name">
-						<input type="text" placeholder="$scope.editingBookmark.url" class="input" ng-model="site_url">
+						<input type="text" class="input" ng-model="editingBookmark.title">
+						<input type="text" class="input" ng-model="editingBookmark.url">
 						<div class="error" ng-show="urlError">Please enter a valid URL</div>
-						<input type="text" placeholder="$scope.editingBookmark.category" class="input" ng-model="site_category">
+						<input type="text" class="input" ng-model="editingBookmark.category">
 						<button class="pale-button-small" ng-click="submitChanges()">Submit changes</button>
 						<button class="pale-button-small" ng-click="showEdit = false">Cancel</button>
 					</div>
 					<!-- hyperlinks for external links -->
-					<a href="https://github.com/habin-isa/phantom-abraham-linkoln" class="external-links">	► Github repository</a>
-					<a href="https://github.com/habin-isa/phantom-abraham-linkoln/blob/master/README.md" class="external-links"> ► Technical Design Document</a>  
+					<a href="https://github.com/habin-isa/phantom-abraham-linkoln" class="external-links">► Github repository</a>
+					<a href="https://github.com/habin-isa/phantom-abraham-linkoln/blob/master/README.md" class="external-links">► Technical Design Document</a>  
 			</div>
 		</div>
 			<script src="js/index.js"></script>

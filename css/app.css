@@ -121,7 +121,7 @@ padding-left: 0;
 input:focus {
 	outline:none;
 }
-.button {
+/* .button {
 	height: 18px;
 	width: 50px;
 	background-color:#4237b9;
@@ -133,7 +133,7 @@ input:focus {
 	margin-top: 2.5px;
 	margin-left: 10px;
 	padding-top: 5px;
-}
+} */
 .button__edit {
 	box-sizing: border-box;
 	height: 19px;
@@ -148,6 +148,12 @@ input:focus {
 	border: none;
 	float: right;
 	margin-left: 5px;
+}
+.button__edit:hover, 
+.button__submit:hover, 
+.pale-button:hover, 
+.pale-button-small:hover {
+	background-color: #ec6385;
 }
 .button__submit {
 	height: 18px;

@@ -202,12 +202,31 @@ function appCtrl ($scope) {
   };
 
   $scope.submitChanges = function () {
-    // var id = $scope.editingBookmark[]
     $scope.deleteBookmark($scope.editingId);
     $scope.isValidUrl();
-    $scope.addBookmark();
+    const name = $scope.editingBookmark.title;
+    const category = $scope.editingBookmark.category;
+    const url = $scope.editingBookmark.url;
+    if ($scope.isValidUrl(url) === true) {
+      $scope.bookmarks.push({
+        title: name.charAt(0).toUpperCase() + name.slice(1),
+        url: url,
+        category: category.charAt(0).toUpperCase() + category.slice(1),
+        likes: 0
+      });
+      $scope.newLink = $scope.site_name;
+      $scope.site_name = '';
+      $scope.site_url = '';
+      $scope.site_category = '';
+      $scope.showResult = true;
+      $scope.urlError = false;
+    } else {
+      return $scope.urlError = true;
+    };
     $scope.showEdit = false;
-  }
+  };
+
+  
 
   // $scope.openInNewTab = function (url) {
   //   window.open(url,'_blank');

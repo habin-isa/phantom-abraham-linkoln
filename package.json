@@ -1,5 +1,22 @@
 {
-	"scripts": {
-		"start": "node server.js"
-	}
+  "name": "phantom-abraham-linkoln",
+  "version": "1.0.0",
+  "description": "bookmarks manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/habin-isa/phantom-abraham-linkoln.git"
+  },
+  "author": "habin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/habin-isa/phantom-abraham-linkoln/issues"
+  },
+  "homepage": "https://github.com/habin-isa/phantom-abraham-linkoln#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }

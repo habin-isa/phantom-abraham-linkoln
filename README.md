@@ -24,6 +24,7 @@ https://abraham-linkoln.herokuapp.com/
 - Express
 - Node.js
 - Heroku
+- ES Lint
 - Invision studio for design
 
 ![alt text](/assets/linkoln-diagram.png "Structure")
@@ -37,7 +38,7 @@ https://abraham-linkoln.herokuapp.com/
 - Adds ability for users to delete any bookmark, similarly to editing a bookmark.
 - Sets up automatic deployment (CI, CD) to Heroku.
 - Extends by experimenting with filter, adds search bar to search through bookmarks.
-- Continues to deploy style changes.
+- Continues to deploy style changes and linter.
 
 ## Struggles:
 - Struggled hugely with keeping the controller skinny, the controller is very clunky and has not been distributed into multiple modules, I would like to improve this with more time. I see this as a result of learning Angular.js whilst creating the project. I would like to spend time understanding the best practices of Angular.js and how to go about creating components to optimise this app.
@@ -46,4 +47,4 @@ https://abraham-linkoln.herokuapp.com/
 ![alt text](/assets/linkoln-improvements.png "Improvements")
 
 ## Improvements:
-- My main priority is to distribute every module into components away from the main index.html page. This is a dipiction of how I plan to go about delegating responsibilites away from the main ng-controller.
+- My main priority is to distribute every module into components away from the main index.html page. Above is a dipiction of how I plan to go about delegating responsibilites away from the main ng-controller.

@@ -1,4 +1,7 @@
 /node_modules
 npm-debug.log
 .DS_Store
-/.env
+/.envnode_modules/
+.eslintrc
+.eslintrc.json
+server.js

@@ -48,3 +48,5 @@ https://abraham-linkoln.herokuapp.com/
 
 ## Improvements:
 - My main priority is to distribute every module into components away from the main index.html page. Above is a dipiction of how I plan to go about delegating responsibilites away from the main ng-controller.
+- Set up the project to use a database instead of dummy data.
+- Set up e2e testing.
